@@ -6,3 +6,6 @@ from django.http import HttpResponse
 
 def competition(request):
     return HttpResponse("Hello world!")
+
+def register(request):
+    return HttpResponse("Hello world!")

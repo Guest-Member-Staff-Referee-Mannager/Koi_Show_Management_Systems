@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from K_Competition_Mng.models import competition
+from K_Competition_Mng.models import competition, register
 # Create your views here.
 
 def home (request):
@@ -20,5 +20,37 @@ def competition_edit(request):
     template = loader.get_template('home/competition/competition-edit.html')
     context = {
         'competition': competition,
+    }
+    return HttpResponse(template.render(context, request))
+
+def account(request):
+    account = register.objects.all()
+    template = loader.get_template('home/register/account.html')
+    context = {
+        'register': account,
+    }
+    return HttpResponse(template.render(context, request))
+
+def account_edit(request):
+    account_edit = register.objects.get(id = 1)
+    template = loader.get_template('home/register/account-edit.html')
+    context = {
+        'register': register,
+    }
+    return HttpResponse(template.render(context, request))
+
+def koi(request):
+    koi = register.objects.all()
+    template = loader.get_template('home/register/koi.html')
+    context = {
+        'register': account,
+    }
+    return HttpResponse(template.render(context, request))
+
+def koi_edit(request):
+    koi_edit = register.objects.get(id = 1)
+    template = loader.get_template('home/register/koi-edit.html')
+    context = {
+        'register': register,
     }
     return HttpResponse(template.render(context, request))
