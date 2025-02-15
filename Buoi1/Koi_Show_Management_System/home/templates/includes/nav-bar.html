@@ -1,39 +1,37 @@
 {% load static %}
 <header class=" container-fluid d-flex align-items-center justify-content-between py-3 px-4 bg-secondary"
-  style="border-bottom:2px solid #d0d0d0;position: fixed; top:0; left:0; right: 0;">
-  <div class="d-flex align-items-center">
-    <div
-      style="width:90px; height:90px; border-radius:50%; background-color:#e0f7fa; display:flex; align-items:center; justify-content:center;">
-      <img src="../../../static/home/assets/img/avatars/logo.png" alt="Koi Show Logo" style="width:70px; height:70px;">
-    </div>
-    <h4
-      style="margin-left:15px; font-weight:bold; font-family: 'Dancing Script'; text-transform:uppercase; color:#5b1c18; text-align: center;">
-      ALL VIETNAM <br> KOI SHOW
-    </h4>
-  </div>
-
-  <div class="d-flex align-items-center">
-    <nav class="nav" style="gap:20px;">
-      <a class="nav-link" href="koi" style="font-weight:bold; color:#571515; font-size:16px;">TRANG CHỦ</a>
-      <a class="nav-link" href="koi" style="font-weight:bold; color:#571515; font-size:16px;">GIỚI THIỆU</a>
-      <a class="nav-link" href="koi-edit" style="font-weight:bold; color:#571515; font-size:16px;">LIÊN HỆ</a>
-      <a class="nav-link" href="account-edit" style="font-weight:bold; color:#571515; font-size:16px;">TÊN TÀI KHOẢN</a>
-    </nav>
-    {% comment %} <div style="border-left:2px dashed #8a8a8a; height:45px; margin:0 20px;"></div>
-    <button
-      style="background-color:#a45c54; color:white; font-weight:bold; font-size:14px; border-radius:20px; padding:10px 24px; box-shadow:0px 2px 5px rgba(0,0,0,0.2);">TÊN<br>TÀI
-      KHOẢN</button> {% endcomment %}
-  </div>
-  <script>
-    const active = `color:white; background-color:#000000; transition:all 0.5s ease`;
-    const link = document.querySelectorAll('.nav-link');
-    [...link].forEach(function (e) {
-      e.addEventListener('click', function () {
-        [...link].forEach(function (link) {
-          link.removeAttribute('style');
-        })
-        e.setAttribute('style', active);
-      })
-    })
-  </script>
+        style="border-bottom:2px solid #d0d0d0;position: fixed; top:0; left:0; right: 0;">
+        <div class="d-flex align-items-center">
+            <div
+                style="width:90px; height:90px; border-radius:50%; background-color:#e0f7fa; display:flex; align-items:center; justify-content:center;">
+                <img src="../../../static/home/assets/img/avatars/logo.png" alt="Koi Show Logo" style="width:70px; height:70px;">
+            </div>
+            <h4 style="margin-left:15px; font-weight:bold; font-family: 'Dancing Script'; text-transform:uppercase; color:#5b1c18; text-align: center;">ALL VIETNAM <br> KOI SHOW
+            </h4>
+        </div>
+    
+        <div class="d-flex align-items-center">
+            <nav class="nav" style="gap:20px;">
+                <a class="nav-link" href="koi" style="font-weight:bold; color:#571515; font-size:16px;">TRANG CHỦ</a>
+                <a class="nav-link" href="koi" style="font-weight:bold; color:#571515; font-size:16px;">GIỚI THIỆU</a>
+                <a class="nav-link" href="koi-edit" style="font-weight:bold; color:#571515; font-size:16px;">LIÊN HỆ</a>
+                <a class="nav-link" href="account-edit" style="font-weight:bold; color:#571515; font-size:16px;">TÊN TÀI KHOẢN</a>
+            </nav>
+            {% comment %} <div style="border-left:2px dashed #8a8a8a; height:45px; margin:0 20px;"></div>
+            <button
+                style="background-color:#a45c54; color:white; font-weight:bold; font-size:14px; border-radius:20px; padding:10px 24px; box-shadow:0px 2px 5px rgba(0,0,0,0.2);">TÊN<br>TÀI
+                KHOẢN</button> {% endcomment %}
+        </div>
+        <script>
+            const active = `color:white; background-color:#000000; transition:all 0.5s ease`;
+            const link = document.querySelectorAll('.nav-link');
+            [...link].forEach(function(e){
+                e.addEventListener('click', function() {
+                    [...link].forEach(function(link) {
+                        link.removeAttribute('style');
+                    })
+                    e.setAttribute('style',active);
+                })
+            })
+        </script>
 </header>
