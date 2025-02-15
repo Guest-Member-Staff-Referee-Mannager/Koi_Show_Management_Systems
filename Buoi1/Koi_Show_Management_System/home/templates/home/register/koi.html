@@ -1,0 +1,73 @@
+% extends "master.html" %}
+
+{%block navbar%}
+{% include '../../includes/nav-bar.html' %}
+{%endblock%}
+
+{%block content%}
+<div class="container py-5" style="width: 800px; height: 100%; margin-top: 100px; overflow: hidden; margin-left:8%">
+    <div class="text-center mb-5">
+        <img src="../../../static/home/assets/img/avatars/bcg.png" alt="Koi Show 2024" class="img-fluid rounded">
+    </div>
+    <div class="mb-6">
+        <h2 class="fw-bold text-danger">Triển lãm All Vietnam Koi năm 2024 đã kết thúc</h2>
+        <p class="text-secondary" style="font-size: 20px;">Chúng tôi muốn chúc mừng 6 nhà vô địch của chúng tôi và muốn
+            gửi lời cảm ơn sâu sắc đến tất cả những người đã tham gia
+            Chương trình Koi Show này.</p>
+        <p class="text-secondary" style="font-size: 20px;">Mục tiêu của chương trình cá koi này là giáo dục và quảng bá
+            niềm vui của việc nuôi cá koi như một sở thích. Chúng tôi
+            hy vọng chúng tôi đã khuyến khích bạn quan tâm đến việc học cách chăn nuôi tuyệt vời để nuôi cá koi Việt Nam
+            và hy vọng
+            chúng tôi đã giúp hỗ trợ nỗ lực của bạn để trở thành bậc thầy cá koi.</p>
+        <p class="text-secondary" style="font-size: 20px;">Giải thưởng là gì?: Tấm bảng tuyết tùng, Mr. Kodama Koi Food
+            và Giấy chứng nhận là những giải thưởng hàng đầu. Sẽ có
+            nhiều giải thưởng, giải thưởng khác của các nhà tài trợ của chúng tôi.</p>
+        <p class="text-secondary mb-5" style="font-size: 20px;">Các vị ban giám khảo uy tín đến từ Asean và Nhật Bản
+            trong đó có ông Hisashi Hirasawa - Trưởng Ban Giám khảo và cũng là
+            Chủ tịch Hiệp hội Xúc tiến Nishikigoi Nhật Bản</p>
+    </div>
+    <div class="text-center">
+        <h3 class="fw-bold mb-5">Top 6 Champions</h3>
+        <div class="row g-2">
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi1.jpg"
+                    class="img-fluid rounded object-fit-cover"></div>
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi2.jpg"
+                    class="img-fluid rounded object-fit-cover"></div>
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi3.jpg"
+                    class="img-fluid rounded object-fit-cover"></div>
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi4.jpg"
+                    class="img-fluid rounded object-fit-cover"></div>
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi5.png"
+                    class="img-fluid rounded object-fit-cover"></div>
+            <div class="col-2"><img src="../../../static/home/assets/img/avatars/koi6.jpg"
+                    class="img-fluid rounded object-fit-cover"></div>
+        </div>
+        {% comment %} <button class="btn btn-success mt-3 px-4 py-2">Xem cá Koi</button> {% endcomment %}
+        <a class="competition-link" href="competitions"><button class="btn btn-success mt-3 px-4 py-2">Xem cá
+                Koi</button></a>
+    </div>
+
+    <div class="mb-5">
+        <h4 class="fw-bold">Video triển lãm</h4>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dNpzZ-IaQgs?si=WORdz2FH2Xdxuh4T"
+            frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="bg-light p-4 rounded">
+        <h5 class="fw-bold">Tham gia Bản tin All VietNam</h5>
+        <p>Nhận thông báo về các chương trình Koi mới nhất.</p>
+        <input type="email" class="form-control mb-3" placeholder="Nhập email của bạn">
+        <button class="btn btn-primary w-10 ml-auto">Đăng ký</button>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{%endblock%}
+
+{%block footer%}
+{% include '../../includes/footer.html' %}
+{%endblock%}

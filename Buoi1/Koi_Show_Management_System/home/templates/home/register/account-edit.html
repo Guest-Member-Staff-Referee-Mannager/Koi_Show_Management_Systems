@@ -1,7 +1,12 @@
 {% extends "master.html" %}
 
+{%block navbar%}
+{% include '../../includes/nav-bar.html' %}
+{%endblock%}
+
 {%block content%}
-<div class="user-form  mx-auto" style="width: 600px; max-height: 500px; overflow: hidden; border:1px solid #ccc">
+<div class="user-form  mx-auto"
+    style="width: 700px; height: 300px; margin-top: 200px; overflow: hidden; border:1px solid #ccc; position: fixed; top:0; left:0; right: 0;">
     <div class="header-user" style="width:100%; height :120px">
         <div class="user-top" style="height : 50%; background-color: #ccc; display: flex; justify-content: center;">
             <div class="avatar" style="height:60px;width: 60px; border: 3px solid #000; border-radius: 50%;">
@@ -29,13 +34,14 @@
             <div class="col-4">
                 <label for="phone" class="fw-bold mb-2">Phone:</label>
                 <input type="text" id="phone" name="phone" value="0987654321" disabled>
-                <button type="button" class="btn btn-danger mt-3">Log out</button>
+                <a href="account"><button type="button" class="btn btn-danger mt-3">Log out</button></a>
             </div>
 
         </div>
     </div>
-    {%endblock%}
+</div>
+{%endblock%}
 
-    {%block footer%}
-    {% include '../../includes/footer.html' %}
-    {%endblock%}
+{%block footer%}
+{% include '../../includes/footer.html' %}
+{%endblock%}
