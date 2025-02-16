@@ -1,13 +1,383 @@
-{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <style>
+        body{
+            overflow-x: hidden;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .DN{
+            height: 682px;
+            width: 636px;
+            background-color: #FFFFFF;
+            position: absolute;
+            opacity: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 40px 0px gray;
+            left: 100px
+        }
+        .form{
+            height: 824px;
+            width: 636px;
+            background-color: #FFFFFF;
+            position: absolute;
+            opacity: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 40px 0px gray;
+            right: 100px
+        }
+        .thoat i{
+            position: absolute;
+            left: 570px;
+            top: 32px;
+            color: #F27052;
+            height: 24px;
+            width: 24px;
+            font-size: 30px;
+        }
+        .khung{
+            left: 126px;
+            position: absolute;
+            height: 682px;
+            width: 384px;
+        }
+        .logo{
+            height: 110px;
+            width: 110px;
+            position: absolute;
+            top: 60px;
+            left: 132px;
+            background-image: url(../../../static/home/assets/img/avatars/logo.png);
+            background-size: cover;
+        }
+        .khung1{
+            position: absolute;
+            height: 60px;
+            width: 384px;
+            top: 186.67px;
+        }
+        .khung1 h1{
+            position: absolute;
+            font-size: 24px;
+            font-family: 'Bold';
+            font-weight: bold;
+            height: 34px;
+            width: 118px;
+            left: 133px;
+            color:#00315C;
+        }
+        .khung1 h2{
+            position: absolute;
+            font-size: 16px;
+            font-family: 'Regular';
+            font-weight: 300;
+            height: 22px;
+            width: 377px;
+            left: 3.5px;
+            top: 38px;
+            color: #707070;
+            text-align: center;
+        }
+        .khung2{
+            position: absolute;
+            top: 286.67px;
+            height: 188px;
+            width: 384px;
+        }
+        .sdt{
+            position: absolute;
+            height: 71px;
+            width: 384px;
+        }
+        .sdt h1{
+            position: absolute;
+            font-size: 16px;
+            font-family: 'Bold';
+            font-weight: bold;
+            color:#00315C;
+        }
+        input{
+            height: 45px;
+            width: 375px;
+            border-radius: 4px;
+            top: 35px;
+            font-family: 'Regular';
+            font-size: 16px;
+            background-color: #FFFFFF;
+            border: #D1D1D1 solid;
+            color: #707070;
+            position: absolute;
+            padding-left: 12px;
+        }
+        .mk{
+            position: absolute;
+            height: 71px;
+            width: 384px;
+            top: 106px;
+        }
+        .mk h1{
+            position: absolute;
+            font-size: 16px;
+            font-family: 'Bold';
+            font-weight: bold;
+            color:#00315C;
+        }
+        .luu{
+            position: absolute;
+            height: 22px;
+            width: 384px;
+            top: 220px;
+        }
+        .luu input{
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            top: 1px;
+            background-color: #FFFFFF;
+            border: #D1D1D1 solid;
+            color: #707070;
+            position: absolute;
+        }
+        .luu h2{
+            position: absolute;
+            color: #707070;
+            height: 18px;
+            width: 119px;
+            left: 26px;
+            font-size: 14px;
+            font-family: 'Regular';
+            top: -6px;
+        }
+        .luu h3{
+            position: absolute;
+            color: #F27052;
+            height: 22px;
+            width: 116px;
+            left: 268px;
+            font-size: 16px;
+            font-family: 'Regular';
+            top: -10px;
+            opacity: 100%;
+        }
+        h3:active{
+            color: rgb(8, 0, 255) ;
+        }
+        .khung3{
+            position: absolute;
+            height: 83px;
+            width: 187px;
+            top: 550.67px;
+            left: 98.5px;
+        }
+        .button{
+            position: absolute;
+            height: 35px;
+            width: 187px;
+            font-size: 18px;
+            font-family: 'Bold';
+            display: flex;
+            justify-content: center;
+            background-color: #F27052;
+            color: #FFFFFF;
+            padding-top: 16px;
+            border-radius: 4px;
+        }
+        .button:active{
+            background-color: rgb(8, 0, 255) ;
+        }
+        .sign_up{
+            position: absolute;
+            height: 22px;
+            width: 184px;
+            top: 61px;
+            font-size: 14px;
+            font-family: 'Regular';
+            color: #707070;
+        }
+        .sign_up span{
+            position: absolute;
+            color: #F27052;
+            font-size: 16px;
+            font-family: 'Regular';
+            left: 115px;
+            height: 22px;
+            width: 70px;
+        }
+        span:active{
+            color: rgb(8, 0, 255);
+        }
+        .khung4{
+            position: absolute;
+            top: 266.67px;
+            height: 350px;
+            width: 384px;
+        }
+        .Hoten{
+            position: absolute;
+            height: 71px;
+            width: 384px;
+        }
+        .Hoten h1{
+            position: absolute;
+            height: 22px;
+            width: 384px;
+            font-size: 16px;
+            font-family: 'Bold';
+            color: #00315C;
+        }
+        .date_of_birth{
+            position: absolute;
+            top: 102px;
+            height: 71px;
+            width: 384px;
+        }
+        .date_of_birth h1{
+            position: absolute;
+            height: 22px;
+            width: 384px;
+            font-size: 16px;
+            font-family: 'Bold';
+            color: #00315C;
+        }
+        .sdt1{
+            position: absolute;
+            top: 200px;
+            height: 71px;
+            width: 384px;
+        }
+        .sdt1 h1{
+            position: absolute;
+            height: 22px;
+            width: 384px;
+            font-size: 16px;
+            font-family: 'Bold';
+            color: #00315C;
+        }
+        .mk1{
+            position: absolute;
+            top: 303px;
+            height: 71px;
+            width: 384px;
+        }
+        .mk1 h1{
+            position: absolute;
+            height: 22px;
+            width: 384px;
+            font-size: 16px;
+            font-family: 'Bold';
+            color: #00315C;
+        }
+        .agree{
+            position: absolute;
+            top: 405px;
+            height: 18px;
+            width: 384px;
+        }
+        .agree input{
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            top: 10px;
+            background-color: #FFFFFF;
+            border: #D1D1D1 solid;
+            color: #707070;
+            position: absolute;
+        }
+        .agree h2{
+            position: absolute;
+            font-size: 14px;
+            font-family: 'Regular';
+            color:#888888 ;
+            left: 56px;
+            height: 18px;
+            width: 328px;
+            top: 3px;
+        }
+        .khung5{
+            position: absolute;
+            height: 83px;
+            width: 188px;
+            top: 721.67px;
+            left: 98px;
+        }
+    </style>
+    <div class="DN">
+        <a href="koi"><div class="thoat"><i class="fa-solid fa-xmark"></i></div></a>
+        <div class="khung">
+            <div class="logo"></div>
+            <div class="khung1">
+                <h1>Đăng nhập</h1>
+                <h2>Cùng tham gia All VietNam Koi Show.</h2>
+            </div>
+            <div class="khung2">
+                <div class="sdt">
+                    <h1>Số điện thoại</h1>
+                    <input type="text" name="SDT" placeholder="Nhập số điện thoại">
+                </div>
+                <div class="mk">
+                    <h1>Nhập mật khẩu</h1>
+                    <input type="password" name="MK" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="luu">
+                    <input type="radio" name="Duy trì đăng nhập" id="lưu">
+                    <label for="lưu">
+                        <h2>Duy trì đăng nhập</h2>
+                        <a href="./quên mk1.html" target="_self"><h3>Quên mật khẩu?</h3></a>
+                    </label>
+                </div>
+            </div>
+            <div class="khung3">
+                <a href="account-edit"><div class="button">Đăng nhập</div></a>
+                <div class="sign_up">Chưa có tài khoản? <a href="./form ĐK.html" target="_self"><span>Đăng ký</span></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="thoat"><a href="koi" target="_self"><i class="fa-solid fa-xmark"></i></a></div>
+        <div class="khung">
+            <div class="logo"></div>
+            <div class="khung1">
+                <h1>Đăng ký</h1>
+                <h2>Cùng tham gia All VietNam Koi Show.</h2>
+            </div>
+            <div class="khung4">
+                <div class="Hoten">
+                    <h1>Họ và tên</h1>
+                    <input type="text" name="hoten" placeholder="Nhập họ và tên">
+                </div>
+                <div class="date_of_birth">
+                    <h1>Ngày sinh</h1>
+                    <input type="date" name="ngaysinh" placeholder="DD/MM/YY">
+                </div>
+                <div class="sdt1">
+                    <h1>Số điện thoại</h1>
+                    <input type="text" name="so" placeholder="Nhập số điện thoại">
+                </div>
+                <div class="mk1">
+                    <h1>Nhập mật khẩu</h1>
+                    <input type="password" name="matkhau" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="agree">
+                    <input type="checkbox" name="chapnhan" id="agree">
+                    <label for="agree">
+                        <h2>Tôi đồng ý với Chính sách Bảo mật và Các Điều khoản</h2>
+                    </label>
+                </div>
+            </div>
+            <div class="khung5">
+                <a href="account" target="_self"><div class="button">Đăng ký</div></a>
+                <div class="sign_up">Đã có tài khoản? <a href="./ĐN.html" target="_self"><span>Đăng nhập</span></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
-{%block navbar%}
-    {% include '../../includes/nav-bar.html' %}
-{%endblock%}
-    
-{%block content%}
-    
-{%endblock%}
-
-{%block footer%}
-    {% include '../../includes/footer.html' %}
-{%endblock%}
